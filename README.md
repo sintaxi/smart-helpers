@@ -1,22 +1,26 @@
-# Smart Layouts
+# Smart Helpers
 
-an extension for the [smart platform](http://smart.joyent.com/) that gives you the ability to render your templates with layouts and partials.
+an extension for the [smart platform](http://smart.joyent.com/) that gives you the ability to render your templates with layouts and partials, datetime helpers, and form helpers.
 
 ## Install
 
 add smart-layouts as a git submodule in the js directory of your your smart project:
 
-    git submodule add git://github.com/sintaxi/smart-layouts.git js/smart-layouts
+    git submodule add git://github.com/sintaxi/smart-helpers.git js/smart-helpers
     
-Or if you would like to contribute back to smart-layouts, fork the project and then install the submodule with your remote repo location:
+Or if you would like to contribute back to smart-helpers, fork the project and then install the submodule with your remote repo location:
 
-    git submodule add git@github.com:<username>/smart-layouts.git js/smart-layouts
+    git submodule add git@github.com:<username>/smart-helpers.git js/smart-helpers
     
 ## Usage
 
-in your `bootstrap.js` file tell your smart application to use smart-layouts:
+in your `bootstrap.js` file tell your smart application to use smart-helpers. only require the helpers you want to use:
 
-    system.use("smart-layouts.init")
+    system.use("smart-helpers.layouts")
+    system.use("smart-helpers.datetime")
+    system.use("smart-helpers.forms")
+
+### Layouts
 
 smart-layouts defaults to `layouts/application.html`. This file may look something like this (catch_content is where your template will be rendered):
 
@@ -45,6 +49,10 @@ in your Sammy application, replace your instances of `template("foobar.html");` 
 or if you would like to explicitly specify a layout to use:
     
     render(this, "foobar.html", { layout:"tasks.html" })
+    
+### forms
+
+### datetime
 
 
 The MIT License
