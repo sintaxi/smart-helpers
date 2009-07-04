@@ -18,7 +18,7 @@ in your `bootstrap.js` file tell your smart application to use smart-layouts:
 
     system.use("smart-layouts.init")
 
-smart-layouts defaults to `layouts/application.js`. This file may look something like this (catch_content is where your template will be rendered):
+smart-layouts defaults to `layouts/application.html`. This file may look something like this (catch_content is where your template will be rendered):
 
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
       "http://www.w3.org/TR/html4/strict.dtd">
