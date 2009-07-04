@@ -14,11 +14,16 @@ Or if you would like to contribute back to smart-helpers, fork the project and t
     
 ## Usage
 
-in your `bootstrap.js` file tell your smart application to use smart-helpers. only require the helpers you want to use:
+in your `bootstrap.js` file tell your smart application to use smart-helpers:
+    
+    system.use("smart-helpers.init")
+    
+or only require the helpers you want to use:
+    
+    system.use("smart-helpers.lib.layouts")
+    system.use("smart-helpers.lib.datetime")
+    system.use("smart-helpers.lib.forms")
 
-    system.use("smart-helpers.layouts")
-    system.use("smart-helpers.datetime")
-    system.use("smart-helpers.forms")
 
 ### Layouts
 
@@ -50,9 +55,9 @@ or if you would like to explicitly specify a layout to use:
     
     render(this, "foobar.html", { layout:"tasks.html" })
     
-### forms
+### Forms
 
-### datetime
+### Datetime
 
 
 The MIT License
