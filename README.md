@@ -8,21 +8,11 @@ Add smart-helpers as a git submodule. In the root of your your smart project run
 
     git submodule add git://github.com/sintaxi/smart-helpers.git js/smart-helpers
     
-**Or** if you would like to contribute back to smart-helpers, fork the project and then install the submodule with your remote repo location:
-
-    git submodule add git@github.com:<username>/smart-helpers.git js/smart-helpers
-    
 ## Usage
 
 In your `bootstrap.js` file tell your smart application to use smart-helpers:
     
     system.use("smart-helpers.init")
-    
-**Or** only require the helpers you want to use:
-    
-    system.use("smart-helpers.lib.layouts")
-    system.use("smart-helpers.lib.datetime")
-    system.use("smart-helpers.lib.forms")
 
 
 ### Layouts
@@ -54,10 +44,6 @@ In your Sammy application, replace your instances of `template("foobar.html");` 
 **Or** if you would like to explicitly specify a layout to use:
     
     render(this, "foobar.html", { layout:"tasks.html" })
-    
-### Forms
-
-### Datetime
 
 
 The MIT License
